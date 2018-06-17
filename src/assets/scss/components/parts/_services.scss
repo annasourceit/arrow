@@ -1,0 +1,39 @@
+.services {
+}
+
+.blueHead {
+ @include sectionHead(#2980b9);
+}
+.list-serv {
+  @include flex-grid-row();
+  @extend .align-justify;
+  margin-top: 53px;
+}
+.list-serv__item{
+  @include flex-grid-column(12);
+  text-align: center;
+  font-size: 0;
+  padding: 0 30px;
+  @include breakpoint(xlg) {
+    @include flex-grid-column(4);
+    padding: 0 112px;
+  }
+}
+.list-serv__icon {
+  transform: scale(0.65);
+}
+.list-serv__title {
+  margin: -7px 0 20px 0;
+  color: #616161;
+  font-size: 20px;
+  font-weight: 700;
+}
+.list-serv__description {
+  color: #616161;
+  max-width: 180px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+}

@@ -1,0 +1,61 @@
+.contact {
+  @include bg-img("../img/footer-bg.png");
+  position: relative;
+  //clip-path: polygon(100% 100%, 100% 0, 50% 207px, 0 0, 0 100%);
+  &__head {
+    padding-top: 265px;
+  }
+  &__list {
+    @include flex-grid-column(12,30);
+    @include flex-grid-row();
+    padding: 18px 0 0 0;
+  }
+  &__copyright {
+    @include flex-grid-column(12,30);
+    @include flex-grid-row();
+  }
+}
+
+.listContact {
+  @include flex-grid-row();
+  width: 100%;
+  @extend .align-spaced;
+}
+.listContact__item {
+  @include flex-grid-column(12);
+  text-align: center;
+  color: #fafcfe;
+  @include breakpoint(md) {
+    @include flex-grid-column(3);
+  }
+}
+.listContact__wrap {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+.listContact__link{
+  &:hover .listContact__img {
+    transform: scale(1.2);
+  }
+}
+.listContact__img {
+  transition: all 0.3s ease;
+}
+
+.listContact__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 13px 0 4px 0;
+}
+.listContact__text {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.copyright__text {
+  color: #fafcfe;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 60px auto 60px;
+}

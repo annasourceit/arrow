@@ -1,0 +1,24 @@
+.offices {
+  @include bg-img("../img/offices-bg.png");
+  position: relative;
+  //clip-path: polygon(50% 100%, 100% calc(100% - 207px), 100% 0, 50% 207px, 0 0, 0 calc(100% - 207px));
+  &__head {
+    padding-top: 257px;
+  }
+}
+.whiteText {
+  text-align: center;
+  color: #fafcfe;
+  font-size: 13px;
+  font-weight: 400;
+  max-width: 50%;
+  margin: 31px auto 56px;
+  line-height: 1.2;
+  @include breakpoint(sm) {
+    max-width: 30%;
+  }
+}
+.offices__map {
+  text-align: center;
+  padding: 9px 0 200px 0;
+}

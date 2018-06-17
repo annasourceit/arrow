@@ -1,0 +1,126 @@
+//.arrow-blocks-bottom {
+//  @include bg-img("../img/Sep-bot.png");
+//  width: 100%;
+//  height: 233px;
+//  position: absolute;
+//  bottom: 0;
+//  left: 0;
+//
+//}
+//.arrow-blocks-top {
+//  @include bg-img("../img/Sep-top.png");
+//  width: 100%;
+//  height: 233px;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//}
+
+.arrow {
+  position: relative;
+  z-index: 1;
+  &:before,
+  &:after {
+    content: '';
+    width: 50%;
+    height: calc(100% + 260px);
+    position: absolute;
+    top: - 123px;
+    left: 0;
+    background-color: white;
+    z-index: -1;
+    transform: skew(0, 12deg);
+  }
+  &:after {
+    left: 49.8%;
+    transform: skew(0, -12deg);
+  }
+}
+
+
+.menu {
+  display: none;
+  @include breakpoint(md) {
+    display: block;
+  }
+  &__item {
+    margin-left: 18px;
+  }
+  &__link {
+    color: #fafcfe;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    &:before {
+      content: '✐';
+      width: 100%;
+      position: absolute;
+      text-align: left;
+      top: 6px;
+      left: -15px;
+      color: transparent;
+      transition: all 0.3s ease;
+    }
+    &:hover,
+    &:focus {
+      color: white;
+    }
+    &:focus {
+      border-bottom: solid 2px white;
+    }
+    &:hover:before {
+      color: white;
+    }
+    &:focus:before {
+      transform: translateX(100%);
+    }
+  }
+}
+/*-------------MOBILE NAVBAR------------*/
+
+.header__mobmenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding: 7px;
+  border: 2px solid white;
+  border-radius: 10px;
+  line-height: 0;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-around;
+  text-align: right;
+  @include breakpoint(md) {
+    display: none;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+.mobmenu__item {
+  width: 100%;
+  height: 1px;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+
+.menu--active {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  width: 100%;
+  z-index: 3;
+  background:#284b69 ;
+  .menu__item {
+    display: block;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
